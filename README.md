@@ -100,10 +100,6 @@ npm run deploy
 - 选择 `gh-pages` 分支和 `/(root)` 目录
 - 点击保存，等待部署完成
 
-#### 5. 访问网站
-部署完成后，您的网站将通过以下地址访问：
-`https://[your-username].github.io/yangtzeu-auditoriums/`
-
 ## 开发说明
 
 ### 添加新的报告厅
