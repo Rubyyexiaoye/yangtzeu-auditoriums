@@ -1,0 +1,70 @@
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+const auditoriums = [
+  { id: 1, name: '东校区报告厅', building: '教学楼A栋' },
+  { id: 2, name: '西校区报告厅', building: '教学楼B栋' },
+  { id: 3, name: '南校区报告厅', building: '教学楼C栋' },
+  { id: 4, name: '北校区报告厅', building: '教学楼D栋' },
+  { id: 5, name: '主校区报告厅', building: '综合楼' },
+  { id: 6, name: '科技楼报告厅', building: '科技楼' },
+  { id: 7, name: '图书馆报告厅', building: '图书馆' },
+  { id: 8, name: '行政楼报告厅', building: '行政楼' },
+  { id: 9, name: '实验楼报告厅', building: '实验楼' },
+  { id: 10, name: '艺术楼报告厅', building: '艺术楼' },
+  { id: 11, name: '体育馆报告厅', building: '体育馆' },
+  { id: 12, name: '学术交流中心', building: '学术交流中心' }
+];
+
+const Home: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleAuditoriumClick = (auditorium: typeof auditoriums[0]) => {
+    navigate(`/auditorium/${auditorium.id}`, { state: { auditorium } });
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-blue-600 to-blue-800">
+      {/* Header */}
+      <header className="bg-white shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center">
+          <div className="h-12 flex items-center justify-center">
+            <img src="/images/logo/Yangtzeu.png" alt="长江大学校徽" className="h-full w-auto object-contain" />
+          </div>
+        </div>
+      </header>
+
+      {/* Title Section */}
+      <div className="text-center py-16">
+        <h2 className="text-4xl font-bold text-white mb-4 tracking-wide">报告厅介绍</h2>
+        <p className="text-blue-100 text-lg opacity-90">点击了解各个报告厅的详细信息</p>
+        <div className="w-24 h-1 bg-gradient-to-r from-blue-300 to-cyan-300 mx-auto mt-6 rounded-full"></div>
+      </div>
+
+      {/* Main Content - Grid of Auditoriums */}
+      <div className="max-w-6xl mx-auto px-4 pb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {auditoriums.map((auditorium) => (
+            <button
+              key={auditorium.id}
+              onClick={() => handleAuditoriumClick(auditorium)}
+              className="group relative bg-white/90 backdrop-blur-sm text-blue-800 font-semibold py-8 px-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 border border-white/20 hover:border-white/40 overflow-hidden"
+            >
+              <div className="relative z-10 text-center">
+                <div className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors duration-300">{auditorium.name}</div>
+                <div className="w-8 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full group-hover:w-12 transition-all duration-300"></div>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blue-200/20 to-transparent rounded-full transform translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* Footer Background */}
+      <div className="fixed bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-blue-900 to-transparent opacity-30 pointer-events-none"></div>
+    </div>
+  );
+};
+
+export default Home;
