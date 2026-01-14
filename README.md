@@ -52,7 +52,7 @@ npm run build
 npm run preview
 ```
 
-## 📁 项目结构
+##  项目结构
 
 ```
 长江大学报告厅介绍网站/
@@ -78,9 +78,41 @@ npm run preview
 
 ## 🚀 部署
 
-本项目已配置Vercel部署，支持一键部署到云端。
+本项目支持多种部署方式，包括GitHub Pages和Vercel。
 
-### Vercel部署步骤
+### GitHub Pages部署（推荐）
+
+#### 1. 安装依赖
+```bash
+npm install gh-pages --save-dev
+```
+
+#### 2. 配置GitHub仓库
+- 在GitHub创建新仓库，命名为 `yangtzeu-auditoriums`
+- 将代码推送到GitHub
+
+#### 3. 部署到GitHub Pages
+```bash
+# 构建并部署
+npm run deploy
+
+# 或者手动构建后部署
+npm run build
+npm run deploy
+```
+
+#### 4. 启用GitHub Pages
+- 进入GitHub仓库设置
+- 找到 "Pages" 选项
+- 选择部署源为 "Deploy from a branch"
+- 选择 `gh-pages` 分支和 `/(root)` 目录
+- 点击保存，等待部署完成
+
+#### 5. 访问网站
+部署完成后，您的网站将通过以下地址访问：
+`https://[your-username].github.io/yangtzeu-auditoriums/`
+
+### Vercel部署（备选）
 1. 将代码推送到GitHub
 2. 访问 [Vercel](https://vercel.com)
 3. 导入GitHub仓库
