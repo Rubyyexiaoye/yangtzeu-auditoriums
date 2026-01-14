@@ -4,7 +4,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === 'production' ? '/yangtzeu-auditoriums/' : './',
+  base: '/yangtzeu-auditoriums/',
   build: {
     sourcemap: false,
     rollupOptions: {
