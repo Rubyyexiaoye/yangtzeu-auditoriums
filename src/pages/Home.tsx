@@ -29,7 +29,7 @@ const Home: React.FC = () => {
       <header className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center">
           <div className="h-12 flex items-center justify-center">
-            <img src="./images/logo/Yangtzeu.png" alt="长江大学校徽" className="h-full w-auto object-contain" />
+            <img src="/images/logo/Yangtzeu.png" alt="长江大学校徽" className="h-full w-auto object-contain" />
           </div>
         </div>
       </header>
