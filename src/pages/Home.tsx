@@ -35,27 +35,27 @@ const Home: React.FC = () => {
       </header>
 
       {/* Title Section */}
-      <div className="text-center py-16">
-        <h2 className="text-4xl font-bold text-white mb-4 tracking-wide">报告厅介绍</h2>
-        <p className="text-blue-100 text-lg opacity-90">点击了解各个报告厅的详细信息</p>
-        <div className="w-24 h-1 bg-gradient-to-r from-blue-300 to-cyan-300 mx-auto mt-6 rounded-full"></div>
+      <div className="text-center py-8 sm:py-12 md:py-16">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4 tracking-wide">报告厅介绍</h2>
+        <p className="text-blue-100 text-sm sm:text-base md:text-lg opacity-90">点击了解各个报告厅的详细信息</p>
+        <div className="w-16 sm:w-20 md:w-24 h-0.5 sm:h-1 bg-gradient-to-r from-blue-300 to-cyan-300 mx-auto mt-4 sm:mt-6 rounded-full"></div>
       </div>
 
       {/* Main Content - Grid of Auditoriums */}
       <div className="max-w-6xl mx-auto px-4 pb-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
           {auditoriums.map((auditorium) => (
             <button
               key={auditorium.id}
               onClick={() => handleAuditoriumClick(auditorium)}
-              className="group relative bg-white/90 backdrop-blur-sm text-blue-800 font-semibold py-8 px-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 border border-white/20 hover:border-white/40 overflow-hidden"
+              className="group relative bg-white/95 backdrop-blur-sm text-blue-800 font-semibold py-4 sm:py-6 md:py-8 px-2 sm:px-4 md:px-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 sm:hover:-translate-y-2 hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50 border border-white/30 hover:border-white/50 overflow-hidden active:scale-95"
             >
               <div className="relative z-10 text-center">
-                <div className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors duration-300">{auditorium.name}</div>
-                <div className="w-8 h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full group-hover:w-12 transition-all duration-300"></div>
+                <div className="text-xs sm:text-sm md:text-base lg:text-lg font-bold mb-1 sm:mb-2 group-hover:text-blue-600 transition-colors duration-300 leading-tight">{auditorium.name}</div>
+                <div className="w-3 sm:w-5 md:w-8 h-0.5 sm:h-1 bg-gradient-to-r from-blue-400 to-cyan-400 mx-auto rounded-full group-hover:w-5 sm:group-hover:w-8 md:group-hover:w-12 transition-all duration-300"></div>
               </div>
               <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-blue-200/20 to-transparent rounded-full transform translate-x-10 -translate-y-10 group-hover:scale-150 transition-transform duration-500"></div>
+              <div className="absolute top-0 right-0 w-8 sm:w-12 md:w-20 h-8 sm:h-12 md:h-20 bg-gradient-to-bl from-blue-200/30 to-transparent rounded-full transform translate-x-2 sm:translate-x-4 md:translate-x-10 -translate-y-2 sm:-translate-y-4 md:-translate-y-10 group-hover:scale-110 sm:group-hover:scale-125 md:group-hover:scale-150 transition-transform duration-500"></div>
             </button>
           ))}
         </div>
