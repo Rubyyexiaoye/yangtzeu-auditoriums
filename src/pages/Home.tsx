@@ -28,7 +28,7 @@ const Home: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="fixed inset-0 z-0">
         <img 
-          src="/images/campus/campus.png" 
+          src="/YabgtzeuAItro/images/campus/campus.png" 
           alt="Campus Background" 
           className="w-full h-full object-cover object-top"
         />
@@ -41,7 +41,7 @@ const Home: React.FC = () => {
         <header className="bg-white/90 backdrop-blur-sm shadow-sm transition-all duration-300">
           <div className="max-w-7xl mx-auto px-4 py-4 flex items-center">
             <div className="h-12 flex items-center justify-center">
-              <img src="/images/logo/Yangtzeu.png" alt="长江大学校徽" className="h-full w-auto object-contain" />
+              <img src="/YabgtzeuAItro/images/logo/Yangtzeu.png" alt="长江大学校徽" className="h-full w-auto object-contain" />
             </div>
           </div>
         </header>
