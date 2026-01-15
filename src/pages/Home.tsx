@@ -30,7 +30,7 @@ const Home: React.FC = () => {
         <img 
           src="/YabgtzeuAItro/images/campus/campus.png" 
           alt="Campus Background" 
-          className="w-full h-full object-cover object-top"
+          className="w-full h-full object-cover object-[75%_top]"
         />
         {/* Blue gradient overlay matching the reference style */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-600/70 to-cyan-400/50 mix-blend-multiply"></div>
