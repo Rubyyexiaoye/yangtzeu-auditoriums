@@ -28,9 +28,9 @@ const Home: React.FC = () => {
       {/* Background Image with Overlay */}
       <div className="fixed inset-0 z-0">
         <img 
-          src="/yangtzeu-auditoriums/images/campus/campus.png" 
+          src="/images/campus/campus.png" 
           alt="Campus Background" 
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top"
         />
         {/* Blue gradient overlay matching the reference style */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-600/70 to-cyan-400/50 mix-blend-multiply"></div>
@@ -41,14 +41,14 @@ const Home: React.FC = () => {
         <header className="bg-white/90 backdrop-blur-sm shadow-sm transition-all duration-300">
           <div className="max-w-7xl mx-auto px-4 py-4 flex items-center">
             <div className="h-12 flex items-center justify-center">
-              <img src="/yangtzeu-auditoriums/images/logo/Yangtzeu.png" alt="长江大学校徽" className="h-full w-auto object-contain" />
+              <img src="/images/logo/Yangtzeu.png" alt="长江大学校徽" className="h-full w-auto object-contain" />
             </div>
           </div>
         </header>
 
         {/* Title Section */}
         <div className="text-center py-8 sm:py-12 md:py-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4 tracking-wide text-shadow-lg">报告厅介绍</h2>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2 sm:mb-4 tracking-wide text-shadow-lg">阅读建筑</h2>
           <p className="text-blue-50 text-sm sm:text-base md:text-lg opacity-100 text-shadow font-medium">点击了解各个报告厅的详细信息</p>
           <div className="w-16 sm:w-20 md:w-24 h-0.5 sm:h-1 bg-gradient-to-r from-blue-300 to-cyan-300 mx-auto mt-4 sm:mt-6 rounded-full shadow-lg"></div>
         </div>
