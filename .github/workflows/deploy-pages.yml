@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main, YZU2.0 ]
+    branches: [ main ]
   workflow_dispatch:
 
 # 设置权限
