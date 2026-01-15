@@ -2,9 +2,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, YZU2.0 ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, YZU2.0 ]
 
 # 设置权限
 permissions:
@@ -34,7 +34,6 @@ jobs:
       
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v4
-      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./dist
