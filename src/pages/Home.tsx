@@ -2,18 +2,76 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 const auditoriums = [
-  { id: 1, name: '东校区报告厅', building: '教学楼A栋' },
-  { id: 2, name: '西校区报告厅', building: '教学楼B栋' },
-  { id: 3, name: '南校区报告厅', building: '教学楼C栋' },
-  { id: 4, name: '北校区报告厅', building: '教学楼D栋' },
-  { id: 5, name: '主校区报告厅', building: '综合楼' },
-  { id: 6, name: '科技楼报告厅', building: '科技楼' },
-  { id: 7, name: '图书馆报告厅', building: '图书馆' },
-  { id: 8, name: '行政楼报告厅', building: '行政楼' },
-  { id: 9, name: '实验楼报告厅', building: '实验楼' },
-  { id: 10, name: '艺术楼报告厅', building: '艺术楼' },
-  { id: 11, name: '体育馆报告厅', building: '体育馆' },
-  { id: 12, name: '学术交流中心', building: '学术交流中心' }
+  {
+    id: 1,
+    name: '求实报告厅',
+    constructionUnit: '江汉石油学院',
+    designUnit: '江汉石油学院设计研究院',
+    constructionCompany: '湖南湘阴县建筑安装工程公司',
+    startDate: '1996年9月',
+    completionDate: '1997年1月',
+    meaning: '名称“求实”源于“求实、进取、创业、报国”之校风精神，皆在倡导师生恪守实践求是、坚持立德自强。'
+  },
+  {
+    id: 2,
+    name: '石油报告厅',
+    constructionUnit: '江汉石油学院',
+    designUnit: '江汉石油学院设计研究院',
+    constructionCompany: '江都建宏总承包公司荆沙工程处',
+    startDate: '1995年3月',
+    completionDate: '1996年11月',
+    meaning: '报告厅内描绘古代石油开采工艺的主题壁画以及报告厅外保留的“江汉石油学院采油器具厂”旧址墙体，整体校区石油教育发展的历史见证。以“石油”为名，不仅是对石油科学为学界提供技术、成果的致敬，更承载“学石油、爱石油、献身石油事业”核心精神的接续传承。'
+  },
+  {
+    id: 3,
+    name: '七里湖报告厅',
+    constructionUnit: '长江大学',
+    designUnit: '荆州市城市规划设计研究院',
+    constructionCompany: '中恒建设集团有限公司',
+    startDate: '2015年7月',
+    completionDate: '2016年12月',
+    meaning: '“七里湖”之名，旨在纪念我校农学院百年的历史地点——荆州城外七里湖，并致敬在此缔造的“七里精神”。以此命名，意在激励师生牢记初心，担当强农兴国的时代使命。'
+  },
+  {
+    id: 4,
+    name: '隆平报告厅',
+    constructionUnit: '长江大学',
+    designUnit: '荆州市城市规划设计研究院',
+    constructionCompany: '中恒建设集团有限公司',
+    startDate: '2015年7月',
+    completionDate: '2016年12月',
+    meaning: '“隆平”之名，旨在缅怀我校农学院校友——杂交水稻之父袁隆平先生。2015年，先生亲临学校讲学并受聘，曾以“长大农大有作为”勉励师生。此命名既寄追思之情，亦盼传承其躬耕为民、笃行育人的崇高精神。'
+  },
+  {
+    id: 5,
+    name: '文波报告厅',
+    constructionUnit: '',
+    designUnit: '',
+    constructionCompany: '',
+    startDate: '2010年11月',
+    completionDate: '2011年1月',
+    meaning: '“文波”之名，旨在纪念与致敬我校石油教育奠基人翁文波院士。东校区长江大道中央立有翁院士铜像，武汉校区此厅亦以“文波”命名，遥相呼应，共同寄托对先生学术风范与奠基之功的深切缅怀。'
+  },
+  {
+    id: 6,
+    name: '启航宣讲厅',
+    constructionUnit: '江汉石油学院',
+    designUnit: '中南设计院',
+    constructionCompany: '湖北省第三建筑公司',
+    startDate: '1990年12月',
+    completionDate: '1991年7月',
+    meaning: '该厅是我校学子接受职业规划教育、参与招聘宣讲的重要场所。名称“启航”，寓意学子由此扬帆，逐梦职场，开启人生新篇章。'
+  },
+  {
+    id: 7,
+    name: '薪火多功能厅',
+    constructionUnit: '',
+    designUnit: '',
+    constructionCompany: '',
+    startDate: '2020年12月',
+    completionDate: '2021年11月',
+    meaning: '长江大学的办学历史，是一部与国家命运同频共振、与民族复兴同向同行的奋斗史。“薪火”典出“薪尽火传”，喻指学校精神、知识与文化如永恒之火，由一代代师生接力传递、永续延绵。这既是对学校“使命文化”的生动诠释，亦是对其传承不辍的庄重承诺。'
+  }
 ];
 
 const Home: React.FC = () => {
@@ -30,7 +88,7 @@ const Home: React.FC = () => {
         <img 
           src="/YabgtzeuAItro/images/campus/campus.png" 
           alt="Campus Background" 
-          className="w-full h-full object-cover object-[75%_top]"
+          className="w-full h-full object-cover object-[85%_top]"
         />
         {/* Blue gradient overlay matching the reference style */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 via-blue-600/70 to-cyan-400/50 mix-blend-multiply"></div>
